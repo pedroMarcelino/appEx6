@@ -26,7 +26,7 @@ export class NgforComponent implements OnInit {
     alert(img);
   }
   makeAlert(str){
-    alert(str)
+    alert(str);
   }
 
   addinArray(nome){
