@@ -1,0 +1,52 @@
+<h2>exercicio 2</h2>
+
+<label for="nump">Digite um numero:</label><br>
+<input type="number" [(ngModel)]="inp1">
+
+<p *ngIf="inp1 > 0">
+  Numero Positivo
+</p>
+<p *ngIf="inp1 < 0">
+  Numero negativo
+</p>
+<p *ngIf="inp1 == 0">
+  Zero
+</p>
+
+
+<h2>Exercicio3</h2>
+
+<label for="">Selecione uma forma de contato</label>
+<select [(ngModel)]="valueselect">
+  <option value="wpp">whatsApp</option>
+  <option value="email">email</option>
+</select>
+<p *ngIf="valueselect == 'wpp'">
+  <input type="number" placeholder="Digite o numero">
+</p>
+
+<p *ngIf="valueselect == 'email'">
+  <input type="email" placeholder="Digite o email">
+</p>
+
+<H2>Exercicio 4</H2>
+<label for="n1">Primeiro Numero :</label>
+<input id="n1" type="numer" [(ngModel)]="n1">
+<br>
+
+<label for="n2">Segundo numero Numero :</label>
+<input id="n2" type="numer" [(ngModel)]="n2">
+<br>
+<input type="radio" value="+" id="mais" [(ngModel)]="opc">
+<label for="mais">+</label><br>
+
+<input type="radio" value="-" id="menos" [(ngModel)]="opc">
+<label for="menos">-</label><br>
+
+<input type="radio" value="*" id="mult" [(ngModel)]="opc">
+<label for="mult">*</label><br>
+
+<input type="radio" value="/" id="div" [(ngModel)]="opc">
+<label for="div">/</label><br>
+
+<input type="text" disabled value="{{result(opc, n1, n2)}}">

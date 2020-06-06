@@ -1,0 +1,31 @@
+<h2>Exercicio5</h2>
+<div *ngFor="let img of arrayImg" style="display: inline; padding-left: 15px;">
+  <img [src]="'../../../assets/' + img" (click)="exibirNome(img)" >
+</div>
+
+<h2>Exercio 6</h2>
+<h1>Tabela</h1>
+
+<table border="1">
+  <tr>
+    <th>
+      Nome dos Paises
+    </th>
+  </tr>
+  <tr *ngFor="let nomeFilme of arrayNomeFilme; let i = index">
+    <td (click)="makeAlert(arrayNotaFilme[i])">
+      {{nomeFilme}}
+    </td>
+
+  </tr>
+</table>
+
+<h2>Exercicio 8</h2>
+
+<input type="text" [(ngModel)]="nome">
+<button (click)="addinArray(nome)">Enviar</button>
+
+<ol *ngFor="let nomeA of arrayNomes">
+  <li>{{nomeA}}</li>
+</ol>
+
